@@ -1,0 +1,33 @@
+{
+  "name": "router",
+  "version": "0.1.0",
+  "description": "Example Reason Esy Project",
+  "license": "MIT",
+  "esy": {
+    "build": "dune build -p #{self.name}",
+    "buildDev": "refmterr dune build --root=.",
+    "buildEnv": {
+      "ODOC_SYNTAX": "re"
+    }
+  },
+  "scripts": {
+    "test": "esy x RunTests.exe",
+    "doc": "esy dune build @doc",
+    "fmt": "esy dune build @fmt --auto-promote --root ."
+  },
+  "dependencies": {
+    "@opam/dune": "*",
+    "@reason-native/rely": "*",
+    "@esy-ocaml/reason": ">= 3.4.0 < 3.6.0",
+    "@opam/dispatch": "*",
+    "@opam/base": "*",
+    "refmterr": "*",
+    "ocaml": "~4.8.1000"
+  },
+  "devDependencies": {
+    "@opam/ocamlformat": "*",
+    "@opam/merlin": "*",
+    "ocaml": "~4.8.1000",
+    "@opam/odoc": "*"
+  }
+}

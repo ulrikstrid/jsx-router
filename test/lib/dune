@@ -1,0 +1,16 @@
+(library
+ (flags
+  (-w -40 -w +26))
+ (name MyLibTest)
+ (public_name router.test)
+ (ocamlopt_flags -linkall -g)
+ (libraries rely.lib router.lib)
+ (modules
+  (:standard \ RunTests)))
+
+(executable
+ (package router)
+ (name RunTests)
+ (public_name RunTests.exe)
+ (libraries router.test)
+ (modules RunTests))
